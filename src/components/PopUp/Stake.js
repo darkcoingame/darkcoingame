@@ -142,12 +142,12 @@ export const StakePopUp = ({version, visible, onClose, onConfirm, onSwapConfirm,
         <StyledStakeButtonsRow>
             <StyledStakeItemButton onClick={ handleClose }>
                 <span>
-                    Cancel
+                    Cancels
                 </span>
             </StyledStakeItemButton>
             <StyledStakeItemButton onClick={ () => { handleConfirm() } } activeButton={ true }>
                 <span>
-                    Confirm
+                    Confirms
                 </span>
             </StyledStakeItemButton>
         </StyledStakeButtonsRow>
