@@ -8,6 +8,12 @@ import { useTranslation } from "react-i18next";
 import { SC } from '../../SmartContracts';
 import '../../index.css';
 
+class Foo extends Component {
+    handleClick() {
+        console.log("По кнопке кликнули");
+    }
+}
+
 const StyledStakeItemContainer = styled.div`
   z-index: 10;
   background: rgba(255, 255, 255, 0.04);
@@ -471,7 +477,7 @@ const swapNft = useCallback(async () => {
           </StyledStakeItemButton>
       </StyledStakeItemRowWithButton>
       {version == "1" ? <StyledStakeItemRowWithButton>
-          <StyledStakeItemButton onClick={ approved ? handleStake : () => {} } activeButton={ approved } style={{ width: '100%' }}>
+          <StyledStakeItemButton onClick={this.handleClick.bind(this)}>
               Stake
           </StyledStakeItemButton>
       </StyledStakeItemRowWithButton> : version == "2" ?
