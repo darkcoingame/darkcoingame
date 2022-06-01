@@ -172,5 +172,26 @@ export const StakePopUp = ({version, visible, onClose, onConfirm, onSwapConfirm,
                 </span>
             </StyledStakeItemButton>
         </StyledStakeButtonsRow>
-    </PopUp> : null
+    </PopUp>
+                      : version == "4" ? <PopUp label="Withdraw METO" visible={visible} onClose={handleClose}>
+                <StyledStakeAmount>
+                    <input type="text" value={amount} onChange={handleInputChange} />
+                    <div className="currency">
+                        {inStake || '-'} METO
+                        <img src={WalletIcon} alt="Wallet" />
+                    </div>
+                </StyledStakeAmount>
+                <StyledStakeButtonsRow>
+                    <StyledStakeItemButton onClick={handleClose}>
+                        <span>
+                            Cancel
+                        </span>
+                    </StyledStakeItemButton>
+                    <StyledStakeItemButton onClick={() => { handleConfirm() }} activeButton={true}>
+                        <span>
+                            Confirm
+                        </span>
+                    </StyledStakeItemButton>
+                </StyledStakeButtonsRow>
+            </PopUp> : null
 }
