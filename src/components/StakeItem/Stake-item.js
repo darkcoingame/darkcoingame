@@ -470,7 +470,7 @@ const swapNft = useCallback(async () => {
               <img src={WithdrawIcon} alt="" />
           </StyledStakeItemButton>
       </StyledStakeItemRowWithButton>
-      {version == "4" ? <StyledStakeItemRowWithButton>
+      {version == "1" ? <StyledStakeItemRowWithButton>
           <StyledStakeItemButton onClick={ approved ? handleStake : () => {} } activeButton={ approved } style={{ width: '100%' }}>
               Staker
           </StyledStakeItemButton>
